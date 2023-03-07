@@ -10,6 +10,12 @@ export const ContainerPage = styled.div`
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.container-main {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+}
+
 .title {
   font-size: 85px;
   color: #FFF;

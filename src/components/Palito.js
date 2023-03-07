@@ -12,19 +12,18 @@ function CompPalito(props) {
   }
 
   function palitoSelecionado() {
-    console.log(props.tamanhoColunas[0]);
     for (var i = props.y; i <= props.tamanhoColunas[props.x]; i++) {
       const imagem = document.getElementById("img" + props.x + i);
-      console.log(imagem);
+      console.log(imagem.src)
       imagem.src =
-        "http://localhost:3000/static/media/Palito-selecionado.50ea419fc01f4da72750.png";
+        "http://localhost:3000/static/media/Palito-selecionado.772469dbd037028ccecf.png";
     }
   }
 
   function palitoDeselecionado() {
     for (var i = props.y; i <= props.tamanhoColunas[props.x]; i++) {
       document.getElementById("img" + props.x + i).src =
-        "http://localhost:3000/static/media/Palito.7b52fe59aa4456e9f8df.png";
+        "/static/media/Palito.9c353d5a6ec618b8e100.png";
     }
   }
 

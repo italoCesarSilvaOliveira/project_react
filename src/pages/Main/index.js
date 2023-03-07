@@ -1,12 +1,13 @@
 import React from "react";
 import { ContainerPage } from "../../components/Main.js"
 import Board from "../../components/Board";
+import Registro from "../../components/Registro.js";
 
 const Page = () => {
 	return (
 		<ContainerPage>
 			<div className="container">
-				<h1 className="title"> Multiplayer </h1>
+				<h1 className="title">Vez de {Registro.player1} </h1>
 				<Board />
 			</div>
 		</ContainerPage>

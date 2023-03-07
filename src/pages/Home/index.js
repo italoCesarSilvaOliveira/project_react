@@ -8,7 +8,7 @@ const Page = () => {
     <ContainerPage>
       <div className="container">
         <h1 className="title"> Jogo do Nim </h1>
-        <Link to="/Main">
+        <Link to="/Users">
           <button className="button">
             <IoLogoGameControllerB size={40} color="#333333" />
           </button>

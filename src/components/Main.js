@@ -11,7 +11,7 @@ export const ContainerPage = styled.div`
 }
 
 .container-main {
-  background-color: #ffffff;
+  background-color: rgba(111, 111, 111, 0.5);
   border-radius: 15px;
   padding: 10px;
 }
@@ -44,5 +44,13 @@ export const ContainerPage = styled.div`
 .button:hover {
   background-color: #E94057;
   transition: .25s;
+}
+
+.imagem {
+  margin: 9px;
+}
+
+.esconder {
+  visibility: hidden;
 }
 `;

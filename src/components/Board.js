@@ -2,7 +2,7 @@ import React from "react";
 import Palito from "../components/Palito";
 
 class Board extends React.Component {
-  constructor() {
+  constructor({name}) {
     super();
     this.tamanhoColunas = [1, 2, 3, 4, 3, 2, 1];
   }

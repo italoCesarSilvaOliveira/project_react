@@ -1,11 +1,25 @@
 
 # :fire: Relato de Implementação
-O projeto a seguir é uma implementação do Jogo NIM em React. 
+O projeto a seguir é uma implementação do Jogo NIM em React.
+1. [Descrição do Objetivo](#descricao)
+2. [Softwares Necessários](#softwares)
+3. [Passo-a-Passo](#passo)
+3.1. [Home](#home)
+3.2. [Users](#users)
+3.3. [Main](#main) 
+3.3. [Win](#win) 
+
 ___
-## Descrição do Objetivo
+
+<div id="descricao">
+<h1> Descrição do Objetivo </h1>
+</div>
 O Objetivo deste projeto é mostrar que o React facilitou a implementação de algumas funcionalidades do Jogo NIM. A dinâmica de implementação em SPA faz com que não tenhamos que nos preocupar com certos aspectos.
+
 ___
-## Instalação dos softwares necessários
+<div id="softwares">
+<h1>Instalação dos softwares necessários</h1>
+</div>
 ### 1. Pra utilizar o ambiente de execução deste projeto
 
 Primeiramente, clone o repositório para sua máquina e acesse através de algum 
@@ -34,11 +48,15 @@ Com isso todas as dependencias são instaladas, posteriormente, caso você preci
 Agora basta começar o seu projeto! 
 Para ir ao ambiente de execução do browser, faça o passo 1.
 
-## Passo-a-passo para o desenvolvimento
+___
+<div id="passo">
+<h1> Passo-a-passo para o desenvolvimento </h1>
+</div>
 
 Depois de iniciado o projeto (Mostrado no passo anterior), iniciamos a produção do nosso Game.
-### 1. Home
-
+<div id="home">
+<h2>1. Home</h2>
+</div>
 Como a primeira renderização é feita no App.js, nos fizemos todos os componentes desta página voltado para o roteamento entre as páginas, ou seja, a navegação das páginas em si.
 
 Foi importado a biblioteca react-router-dom juntamente com os componentes BrowserRouter que serve para poder rotear dentro dos navegadores, o Router aonde é necessário o seu uso porque todos os roteamentos serão feitos dentro dele e o ultimo o Route, que são as páginas que nos vamos mudar. Para fazer essa alteração é necessário importar todas as páginas que vão acontecer o roteamento, neste caso, as páginas Users, Main, Win e a Home que está referenciada como primeira página, então apenas o "/" está sendo descrito para referencia-la.
@@ -63,8 +81,9 @@ Logo em seguida foi exportado o componente com o nome ContainerPage passando a p
 
 <img src="img_readme/Imagem02.jpeg">
 
-### 2. Users
-
+<div id="users">
+<h2> 2. Users </h2>
+</div>
 <img src="img_readme/users.png">
 Este componente ( Page ) será, na prática, um formulário que recebe o nome dos jogadores e que redireciona para o componente ( Page ) do jogo. 
 
@@ -92,9 +111,69 @@ Temos dois states, **`player1`** e **`player2`**, para recebermos o valor de cad
 Usamos o evento onChange para receber o nome digitado em cada campo. 
 Ao executar o submit, criamos uma lista com ambos os nomes e enviamos à função  **`HandleRegistra()`** do users, para atualizarmos os estados. 
 
-### 3. Componente Main
+<div id="main">
+<h2> 3. Componente Main </h2>
+</div>
+
 
 <img src="img_readme/MainJS1.jpeg">
 <img src="img_readme/MainJS2.jpeg">
+
+Esta é a classe principal do nosso projeto, é nela que ocorrerá a interação e execução do game.
+
+Já explicamos alguns imports existentes nela, então passaremos para os novos: **`useLocation`**.
+
+**`useLocation`** : permite identificar o location, pathname, state de qualquer componente; Como você já pode imaginar, utilizamos ele pois passamos uma propriedade `state` no **Navigate** da página Users ( Line 22 ) e queremos saber o valor passado para ela. 
+
+Iniciamos a Page atribuindo a state através da função location, e pegando o state fornecido anteriormente. Esse será o player atual que está jogando. 
+O segundo state é apenas para guardar caso a vitória tenha sido satisfeita. 
+
+Function **`alteraNome()`**: Essa função irá alterar do Jogador1 para o Jogador2, e em caso de vitória, apenas irá setar o State Vitória. Caso **`vitoria`** seja **true**, então iremos para a página de vitória e não entraremos na função return padrão novamente. 
+
+#### 2.1 Componente Board
+
+<img src="img_readme/board.png">
+
+Esse componente se trata do Container em que o tabuleiro de palitos estará sobreposto. O tabuleiro foi feito através de tabela.
+Armazenamos o numero de linhas em cada Coluna e atribuimos um Id para cada palito para facilitar a lógica de programação.
+
+Perceba que ele recebe um parâmetro **`onClickPalito`**, que é a função do Main que testa a vitória. Nós pegamos o state vitória do palito, que será true ou false, em seguida enviamos ao board, que por sua vez envia ao Main. Cada Clique executado gera um teste de vitória. 
+
+Para o componente Palito passamos diversas properties, que serão usadas para a lógica de programação. Properties são parâmetros que você nomeia na hora da chamada do componente e define um valor. Para recebe-los basta colocar o componente recebendo **props** como parâmetros ( É necessário que seu componente esteja em paradigma funcional ).
+
+#### 2.2. Componente Palito
+
+<img src="img_readme/Palito1.png">
+<img src="img_readme/Palito2.png">
+Aqui acontece uma boa parte da lógica de programação, já que o nosso Game gira em torno dos palitos. Não creio que caiba explicar a lógica, então vamos para o React. 
+
+Podemos perceber logo de cara que precisamos importar as Imagens e não somente chamar os Caminhos delas nas tags. 
+
+O Componente Palito irá retornar uma imagem do palito com os atributos setados. Iremos manipular os eventos dentro do próprio Componente: (onMouseOver, onMouseOut, onClick). 
+
+A cada Clique testaremos a vitória, e em caso de vitória enviaremos isso até o main, caso contrário, apenas continuamos escondendo os Palitos. 
+
+Ao finalizar, vamos a última página. 
+
+
+<div id="win">
+<h2> 4. Componente Win </h2>
+</div>
+
+
+<img src="img_readme/Win.png">
+
+A última página: recebemos o player vencedor através do state, receptado pelo useLocation. 
+Há Dois botões que estão dentro da tag Link.
+Essa Tag é também do **`react-router-dom`**, e é responsável por linkar um objeto á outra página, assim, quando clicarmos, seremos redirecionados á ela. 
+
+O Primeiro botão retorna á página inicial e o segundo volta para o board e reinicia o Jogo. 
+
+
+
+
+
+
+
 
 

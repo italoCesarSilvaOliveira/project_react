@@ -10,6 +10,8 @@ function CompPalito(props) {
 			document.getElementById("img" + props.x + i).src = "images/Palito.png";
 			document.getElementById("img" + props.x + i).classList.add("esconder");
 		}
+
+		props.onClickPalito()
 	}
 
 	function palitoSelecionado() {

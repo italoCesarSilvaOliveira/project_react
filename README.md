@@ -38,6 +38,13 @@ Para ir ao ambiente de execução do browser, faça o passo 1.
 
 Depois de iniciado o projeto (Mostrado no passo anterior), iniciamos a produção do nosso Game.
 ### 1. Home
+
+Como a primeira renderização é feita no App.js, nos fizemos todos os componentes desta página voltado para o roteamento entre as páginas, ou seja, a navegação das páginas em si.
+
+Foi importado a biblioteca react-router-dom juntamente com os componentes BrowserRouter que serve para poder rotear dentro dos navegadores, o Router aonde é necessário o seu uso porque todos os roteamentos serão feitos dentro dele e o ultimo o Route, que são as páginas que nos vamos mudar. Para fazer essa alteração é necessário importar todas as páginas que vão acontecer o roteamento, neste caso, as páginas Users, Main, Win e a Home que está referenciada como primeira página, então apenas o "/" está sendo descrito para referencia-la.
+
+<img src="img_readme/App.jpeg" />
+
 Foi criada a primeira página chamada "Home", aonde está contido o titulo e o botão para começar o jogo. 
 
 <img src="img_readme/Imagem01.jpeg" />

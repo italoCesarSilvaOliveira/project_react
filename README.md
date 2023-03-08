@@ -39,6 +39,9 @@ Para ir ao ambiente de execução do browser, faça o passo 1.
 Depois de iniciado o projeto (Mostrado no passo anterior), iniciamos a produção do nosso Game.
 Foi criada a primeira página chamada "Home", aonde está contido o titulo e o botão para começar o jogo. 
 
+<img src="img_readme/Imagem01.jpeg" width=800/>
+</br>
+</br> 
 Já conseguimos notar que foi importado algumas dependências, como por exemplo: "import React from "React"", que irá transpilar o código que foi escrito em objetos react sendo necessário a sua importação. Além desta, importamos também a formatação CSS para o design da página, construido dentro, também, de um arquivo JS, e usado como componente. 
 
 A próxima importação, tem relação com a logo que foi usada no primeiro botão. Para poder pegar esta logo, foi necessário baixar a dependência "react-icons". Através dela podemos escolher uma categoria de icones e usa-los como componente juntamente com as suas propriedades dentro do JSX. 
@@ -46,3 +49,8 @@ A próxima importação, tem relação com a logo que foi usada no primeiro bot�
 Para poder navegar entre as páginas foi necessário importar a biblioteca, ou a dependência, react-router-dom. Dentro desta dependência nos usamos o componente Link para quando o botão for clicado, ele nos levar para o diretório Users. 
 
 Dentro ainda desta primeira parte, foi criado também a página de CSS citada acima, com o nome de ContainerPage. 
+Olhando para este componente, foi necessário baixar uma nova dependência chamada "style-componentes", que é usada para poder usar códigos CSSs dentro do JavaScript. 
+
+Logo em seguida foi exportado o componente com o nome ContainerPage passando a personalização para dentro de uma div.
+
+<img src="img_readme/Imagem02.jpeg" width=800>

@@ -91,3 +91,10 @@ Ele inicia recebendo o parâmetro, que é a função para manipular o state do U
 Temos dois states, **`player1`** e **`player2`**, para recebermos o valor de cada input. 
 Usamos o evento onChange para receber o nome digitado em cada campo. 
 Ao executar o submit, criamos uma lista com ambos os nomes e enviamos à função  **`HandleRegistra()`** do users, para atualizarmos os estados. 
+
+### 3. Componente Main
+
+<img src="img_readme/MainJS1.jpeg">
+<img src="img_readme/MainJS2.jpeg">
+
+

@@ -37,9 +37,10 @@ Para ir ao ambiente de execução do browser, faça o passo 1.
 ## Passo-a-passo para o desenvolvimento
 
 Depois de iniciado o projeto (Mostrado no passo anterior), iniciamos a produção do nosso Game.
+### 1. Home
 Foi criada a primeira página chamada "Home", aonde está contido o titulo e o botão para começar o jogo. 
 
-<img src="img_readme/Imagem01.jpeg" width=800/>
+<img src="img_readme/Imagem01.jpeg" />
 </br>
 </br> 
 Já conseguimos notar que foi importado algumas dependências, como por exemplo: "import React from "React"", que irá transpilar o código que foi escrito em objetos react sendo necessário a sua importação. Além desta, importamos também a formatação CSS para o design da página, construido dentro, também, de um arquivo JS, e usado como componente. 
@@ -53,4 +54,33 @@ Olhando para este componente, foi necessário baixar uma nova dependência chama
 
 Logo em seguida foi exportado o componente com o nome ContainerPage passando a personalização para dentro de uma div.
 
-<img src="img_readme/Imagem02.jpeg" width=800>
+<img src="img_readme/Imagem02.jpeg">
+
+### 2. Users
+
+<img src="img_readme/users.png">
+Este componente ( Page ) será, na prática, um formulário que recebe o nome dos jogadores e que redireciona para o componente ( Page ) do jogo. 
+
+Para trabalhar com Formulários de forma mais prática o react disponibiliza a função **`useState`**, que importamos no inicio do arquivo. 
+
+Em seguida, pode-se observar o **`Navigate`**, componente da biblioteca **React-router-dom**, ajuda a navegar pelas páginas setadas como rotas no arquivo App.js, já citado anteriormente. 
+
+Optamos por implementar o form como um componente do nosso app, apelidamos de **`Registro`**, devemos importa-lo para utiliza-lo.
+
+O **`useState`** é o que chamamos de React Hook, podemos usa-lo para trazer a funcionalidade dinÂmica da página, ou seja, criamos um estado que será dinamico e sempre que for setado, será alterado na página caso esteja sendo usado.
+No Users, temos dois estados: **`players`** e **`entraNomes`**. 
+Perceba que ambos tem valores padrões que são atribuidos na função useState. As funções set que acompanham esses estados serão responsáveis por modificar as variáveis e trazer a dinamicicidade. 
+
+Função **`HadleRegistra()`**: Essa função irá alterar o estado da lista de players para os valores adquiridos dentro do Formulário e mudará o **`entraNomes`** para **true**, permitindo assim que façamos a navegação para a próxima página caso os valores sejam corretamente fornecidos. 
+
+Função **`return()`**: O que será mostrado na page, perceba que passamos um parâmetro para o componente registro, entregamos a função de **`HandleRegistra()`** e assim iremos setar o estado players na página users através do componente **`Registro`**.
+
+#### 2.1 Componente Registro
+<img src="img_readme/registro.png">
+O componente registro se encontra dentro da page users, portanto iremos explica-lo aqui. 
+
+Ele inicia recebendo o parâmetro, que é a função para manipular o state do Users. 
+
+Temos dois states, **`player1`** e **`player2`**, para recebermos o valor de cada input. 
+Usamos o evento onChange para receber o nome digitado em cada campo. 
+Ao executar o submit, criamos uma lista com ambos os nomes e enviamos à função  **`HandleRegistra()`** do users, para atualizarmos os estados. 

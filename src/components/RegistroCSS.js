@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-export const Formulario = styled.div``;
-
 export const RegistroCSS = styled.div`
   .form {
     display: flex;

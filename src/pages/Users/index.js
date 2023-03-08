@@ -8,6 +8,7 @@ import Registro from "../../components/Registro.js";
 const Page = () => {
     const [players, setPlayers] = useState([])
     const [entraNomes, setEntraNomes] = useState(false)
+    
     function handleRegistra(nomes) {
         let novosPlayers = players
         novosPlayers.push(nomes.player1)

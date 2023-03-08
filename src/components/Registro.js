@@ -20,11 +20,11 @@ function Registro({onAdicionarNomes}) {
 				<form onSubmit={handleSubmit} className="form">
 					<label className="label_">
 						Name 1:
-						<input type="text" onChange={(e) => setPlayer1(e.target.value)} />
+						<input type="text" required onChange={(e) => setPlayer1(e.target.value)} />
 					</label>
 					<label className="label_">
 						Name 2:
-						<input type="text" onChange={(e) => setPlayer2(e.target.value)} />
+						<input type="text" required onChange={(e) => setPlayer2(e.target.value)} />
 					</label>
 					
 					<input className="button" type="submit" value="Registrar Nomes" />

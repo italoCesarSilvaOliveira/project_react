@@ -10,7 +10,6 @@ function Registro({onAdicionarNomes}) {
 			player1, player2
 		}
 		
-		alert("Nomes foram registrados!");
 		onAdicionarNomes(data);
 		event.preventDefault();
 	};

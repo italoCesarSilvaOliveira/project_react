@@ -32,7 +32,7 @@ export const ContainerPage = styled.div`
 
 .button {
   background-color: #4286f4;
-  margin: 3 0px 0 0;
+  margin: 3px 0 ;
   padding: 15px 100px;
   border-radius: 15px;
   border: 0;

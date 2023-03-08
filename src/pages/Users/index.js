@@ -1,21 +1,24 @@
 import React from "react";
 import { ContainerPage } from "../../components/Main.js"
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import { History } from "@remix-run/router";
+import { Navigate } from "react-router-dom";
 import Registro from "../../components/Registro.js";
 
 
 const Page = () => {
     const [players, setPlayers] = useState([])
-
+    const [entraNomes, setEntraNomes] = useState(false)
     function handleRegistra(nomes) {
         let novosPlayers = players
         novosPlayers.push(nomes.player1)
         novosPlayers.push(nomes.player2)
 
         setPlayers(players)
-        
+        setEntraNomes(true)
+    }
+
+    if(entraNomes){
+        return <Navigate to="../Main" state={players}/>
     }
 
     return (
@@ -25,13 +28,6 @@ const Page = () => {
                     <h1 className="title">Multiplayer Mode</h1>
                 </div>
                 <Registro onAdicionarNomes={handleRegistra} />
-                <Link to="/Main" state={players}>
-                    <div>
-                        <button className="button">
-                            Jogar
-                        </button>
-                    </div>
-                </Link>
 
             </div>
 

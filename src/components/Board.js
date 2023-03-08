@@ -5,8 +5,9 @@ function Board({onClickPalito}) {
 
   let tamanhoColunas = [1, 2, 3, 4, 3, 2, 1];
 
-  function validaClique(){
-    onClickPalito()
+  function validaClique(vitoria){
+    
+    onClickPalito(vitoria)
   }
 
   return (

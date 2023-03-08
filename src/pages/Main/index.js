@@ -7,7 +7,7 @@ const Page = () => {
 	return (
 		<ContainerPage>
 			<div className="container">
-				<h1 className="title">Vez de {Registro.player1} </h1>
+				<h1 className="title">Vez de {} </h1>
 				<Board />
 			</div>
 		</ContainerPage>

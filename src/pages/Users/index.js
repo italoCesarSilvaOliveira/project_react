@@ -14,7 +14,7 @@ const Page = () => {
                 <Link to="/Main">
                     <div>
                         <button className="button">
-                            Começar
+                            Jogar
                         </button>
                     </div>
                 </Link>

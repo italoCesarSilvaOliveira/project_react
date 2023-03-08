@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const Formulario = styled.div`
+
+`;
+
 export const ContainerPage = styled.div`
 .container {
   height: 100vh;

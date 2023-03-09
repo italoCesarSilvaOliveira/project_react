@@ -10,7 +10,7 @@ const Page = () => {
 	return (
 		<ContainerPage>
 			<div className="container">
-				<h1 className="title"> Vencedor foi {player[0]}!</h1>
+				<h1 className="title">{player[0]} Venceu!</h1>
 				<Link to="/">
 					<button className="button">
 						Novos Jogadores

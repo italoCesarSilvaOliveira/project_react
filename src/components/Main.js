@@ -19,6 +19,7 @@ export const ContainerPage = styled.div`
 .title {
   font-size: 85px;
   color: #FFF;
+  margin: 10px;
   animation: flip_title 2s;
 }
 
@@ -52,5 +53,13 @@ export const ContainerPage = styled.div`
 
 .esconder {
   visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 40px;
+  }
+
+  
 }
 `;

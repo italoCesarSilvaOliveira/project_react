@@ -1,13 +1,14 @@
 
 # :fire: Relato de Implementação
 O projeto a seguir é uma implementação do Jogo NIM em React.
-1. [Descrição do Objetivo](#descricao)
-2. [Softwares Necessários](#softwares)
-3. [Passo-a-Passo](#passo)
-3.1. [Home](#home)
-3.2. [Users](#users)
-3.3. [Main](#main) 
-3.3. [Win](#win) 
+
+- [1. Descrição do Objetivo](#descricao)
+- [2. Softwares Necessários](#softwares)
+- [3. Passo-a-Passo](#passo)
+  - [3.1 Home](#home)
+  - [3.2 Users](#users)
+  - [3.3 Main](#main) 
+  - [3.4 Win](#win) 
 
 ___
 
